@@ -1,0 +1,9 @@
+@SportsLiveScoreApp.API_HostAddress = https://localhost:7015
+
+GET {{SportsLiveScoreApp.API_HostAddress}}/fixture
+
+###
+
+GET {{SportsLiveScoreApp.API_HostAddress}}/fixture/{id}
+
+###
