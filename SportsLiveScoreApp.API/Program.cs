@@ -5,9 +5,6 @@ using SportsLiveScoreApp.Application.Services.Fixtures;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -17,6 +14,8 @@ builder.Services.AddScoped<IRequestHandler, RequestHandler>();
 builder.Services.AddScoped<FixtureService>();
 
 builder.Services.AddMemoryCache();
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 var app = builder.Build();
 
