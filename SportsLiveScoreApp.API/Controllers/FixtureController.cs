@@ -8,7 +8,7 @@ namespace SportsLiveScoreApp.API.Controllers
     [Route("fixture")]
     public class FixtureController : ControllerBase
     {
-        FixtureService FixtureService { get; }
+        public FixtureService FixtureService { get; }
 
         public FixtureController(FixtureService fixtureService)
         {

@@ -15,4 +15,8 @@
     <ProjectReference Include="..\SportsLiveScoreApp.Application\SportsLiveScoreApp.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
 </Project>

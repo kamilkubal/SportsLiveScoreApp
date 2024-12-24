@@ -1,9 +1,12 @@
+using SportsLiveScoreApp.API.Exceptions;
 using SportsLiveScoreApp.Application.Services.Common;
 using SportsLiveScoreApp.Application.Services.Fixtures;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,6 +26,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseExceptionHandler(_ => { });
 
 app.UseHttpsRedirection();
 
