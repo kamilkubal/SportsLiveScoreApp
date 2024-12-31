@@ -28,7 +28,7 @@ namespace SportsLiveScoreApp.API.Controllers
         public ActionResult<DetailsViewModel> Get([FromRoute]int? id)
         {
             if (!id.HasValue || id <= 0)
-                return NotFound("Value 'Id' is not valid");
+                return NotFound("Value 'Id' has not found");
 
             return Ok(FixtureService.Get(id));
         }
