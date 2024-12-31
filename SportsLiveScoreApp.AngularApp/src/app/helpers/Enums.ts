@@ -1,0 +1,20 @@
+export enum MatchStatus {
+    NotStarted,
+    FirstHalf,
+    Halftime,
+    SecondHalf,
+    Finished,
+    Postponed,
+    MatchCancelled,
+    ExtraTime,
+    BreakTime,
+    Penalty,
+    Suspended,
+    Interrupted,
+    MatchFinishedAfterExtraTime,
+    MatchFinishedAfterPenalty,
+    InProgress,
+    TimeToBeDefined,
+    MatchAbandoned,
+    TechnicalLoss
+}

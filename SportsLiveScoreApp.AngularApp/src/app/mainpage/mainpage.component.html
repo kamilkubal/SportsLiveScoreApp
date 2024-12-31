@@ -1,0 +1,84 @@
+<div class="mainpage_container">
+    <div class="mainpage_wrapper">
+        <div class="left_section">
+        <div class="content_section">
+            <div class="card_section">
+                <div class="card_header">
+                    Countries
+                </div>
+                <div class="card_content">
+                    <div class="card_items">
+                        <span>Austria</span>
+                        <span>Belgium</span>
+                        <span>Croatia</span>
+                        <span>England</span>
+                        <span>France</span>
+                        <span>Germany</span>
+                        <span>Italy</span>
+                        <span>Netherlands</span>
+                        <span>Poland</span>
+                        <span>Portugal</span>
+                        <span>Spain</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right_section">
+        <div class="content_section">
+            <div class="card_section" *ngFor="let fixture of fixtures">
+                <div class="card_header">
+                    <div class="title_section">
+                        <img src="{{fixture.countryFlagUrl}}" width="20" height="17" alt="{{fixture.countryFlagUrl}}"/>
+                        {{fixture.countryName}}: {{fixture.leagueName}}
+                    </div>
+                </div>
+                <div class="card_content" *ngFor="let fixtureItem of fixture.items">
+                    <a href="">
+                        <div class="match_info">
+                            <div class="info_time">
+                                @if (matchInProgress(fixtureItem))
+                                {
+                                    <div class="match_live">{{fixtureItem.status.elapsed}}</div>
+                                }   
+                                @else
+                                {
+                                    <div class="">{{fixtureItem.time}}</div>
+                                } 
+                            </div>
+                            <div class="info_participations">
+                                <div class="title_section">
+                                    <img src="{{fixtureItem.homeBrandUrl}}" width="16" height="16" alt="{{fixtureItem.homeBrandUrl}}">
+                                    {{fixtureItem.home}}
+                                </div>
+                                <div class="title_section">
+                                    <img src="{{fixtureItem.awayBrandUrl}}" width="16" height="16" alt="{{fixtureItem.awayBrandUrl}}">
+                                    {{fixtureItem.away}}
+                                </div>
+                            </div>
+                            <div [ngClass]="[matchInProgress(fixtureItem) ? 'info_results match_live' : 'info_results']">
+                                @if (fixtureItem.goals.home != null && fixtureItem.goals.away != null)
+                                {
+                                    <div>{{fixtureItem.goals.home}}</div>
+                                    <div>{{fixtureItem.goals.away}}</div>
+                                }
+                                @else
+                                {
+                                    <div class="text_secondary">—</div>
+                                    <div class="text_secondary">—</div>
+                                }
+                                
+                            </div>
+                            <div class="info_results text_secondary">
+                                <div>{{fixtureItem.halfTime.home}}</div>
+                                <div>{{fixtureItem.halfTime.away}}</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+

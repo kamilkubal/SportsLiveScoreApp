@@ -10,12 +10,23 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddScoped<IRequestHandler, RequestHandler>();
+builder.Services.AddScoped<IRequestHandler, RequestHandlerForTesting>();
 builder.Services.AddScoped<FixtureService>();
 
 builder.Services.AddMemoryCache();
 
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy(name: "CorsPolicy", builder =>
+    {
+        builder.WithOrigins("http://localhost:4200")
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
+    });
+});
 
 var app = builder.Build();
 
@@ -27,6 +38,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseExceptionHandler(_ => { });
+
+app.UseCors("CorsPolicy");
 
 app.UseHttpsRedirection();
 

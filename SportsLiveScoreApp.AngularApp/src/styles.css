@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --bs-body:#edf1f6;
+    --bs-body-secondary: #f8fafc;
+    --bs-primary: #35d0e1;
+    --bs-secondary: #002a51;
+    --bs-text-primary: #01556f;
+    --bs-text-seconadry: #149947;
+}
+
+html, body { height: auto; }
+body { 
+    background-color: var(--bs-body);
+    margin: 0;
+    padding: 0;
+    color: var(--bs-text-primary);
+    font-weight: 400;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--bs-text-primary);
+}
+
+.text_secondary {
+    color: #a0a0a0;
+}
+
+.container {
+    display: block;
+    margin: 0px auto;
+    max-width: 100%;
+}
+
+.card_section {
+    margin: 0px 0px 12px 0px;
+    border-bottom: solid 1px #002a51;
+}
+
+.card_header {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 6px 0px 6px 0px;
+}
+
+.card_content {
+    font-weight: 300;
+    padding-bottom: 12px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 992px;
+    }
+}
+
+@media (min-width: 1344px) {
+    .container {
+        width: 1344px;
+    }
+}
