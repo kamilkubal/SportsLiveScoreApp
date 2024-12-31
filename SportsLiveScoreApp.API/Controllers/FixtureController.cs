@@ -18,7 +18,7 @@ namespace SportsLiveScoreApp.API.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<ListViewModel>> GetList([FromQuery]DateOnly? filterDate)
         {
-            if (filterDate == null)
+            if (!filterDate.HasValue)
                 return BadRequest("Date time is not valid");
 
             return Ok(FixtureService.GetList(filterDate.Value));
