@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SportsLiveScoreApp.Application.Helpers.Enums
+namespace SportsLiveScoreApp.Domain.Enums
 {
     public enum MatchEventType
     {

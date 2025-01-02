@@ -1,4 +1,4 @@
-﻿using SportsLiveScoreApp.Application.Helpers.Enums;
+﻿using SportsLiveScoreApp.Domain.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;

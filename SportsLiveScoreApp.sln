@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsLiveScoreApp.API", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsLiveScoreApp.Application", "SportsLiveScoreApp.Application\SportsLiveScoreApp.Application.csproj", "{1B3708F8-BECA-4DA4-B45A-76156FC3FD74}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportsLiveScoreApp.Domain", "SportsLiveScoreApp.Domain\SportsLiveScoreApp.Domain.csproj", "{2B165C63-E42C-4E83-A681-8B853633D48A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{1B3708F8-BECA-4DA4-B45A-76156FC3FD74}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B3708F8-BECA-4DA4-B45A-76156FC3FD74}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B3708F8-BECA-4DA4-B45A-76156FC3FD74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B165C63-E42C-4E83-A681-8B853633D48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B165C63-E42C-4E83-A681-8B853633D48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B165C63-E42C-4E83-A681-8B853633D48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B165C63-E42C-4E83-A681-8B853633D48A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

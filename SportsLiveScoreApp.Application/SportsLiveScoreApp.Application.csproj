@@ -15,4 +15,8 @@
     <Folder Include="DummiesData\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SportsLiveScoreApp.Domain\SportsLiveScoreApp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
